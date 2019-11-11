@@ -37,13 +37,13 @@ export class MessageSenderController extends PureComponent<TMessageSenderControl
                     onEmailTitleChange={this.onEmailTitleChange}
                     onLetterContentChange={this.onLetterContentChange}
                 /> : <div className={css.loadingWrapper}>
-                    <div className={css.successMessage}>
-                        <WithLoading
-                            status={loadingStatus}
-                            error={errorMessage}>
-                            <MessageSenderSuccessContainer/>
-                        </WithLoading>
-                    </div>
+                        <div className={css.successMessage}>
+                            <WithLoading
+                                status={loadingStatus}
+                                error={errorMessage}>
+                                <MessageSenderSuccessContainer/>
+                            </WithLoading>
+                        </div>
                 </div>
                 }
             </>

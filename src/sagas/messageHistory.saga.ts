@@ -9,7 +9,7 @@ const getData = () => api.get(`/posts`);
 export function* getHistory () {
     try {
         const response = yield call(getData)
-        // simulate succes http-response
+        // simulate success http-response
         yield put(messageHistoryAction.success({data: MessageHistoryFixture}))
 
     } catch (e) {

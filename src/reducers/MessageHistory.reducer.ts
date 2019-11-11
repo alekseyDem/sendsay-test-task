@@ -2,9 +2,10 @@ import { RemoteDataStatus } from '../RemoteData/RemoteData.component';
 import { createReducer } from './utils';
 import { TNullOrError } from '../models/sharedModels';
 import { MESSAGE_HISTORY_TYPES } from '../actions/messageHistory.action';
+import { TMessageHistoryItem } from '../components/messageHistory/messageHistoryController/MessageHistory.model';
 
 export type TMessageHistoryState = {
-    data: any[],
+    data: TMessageHistoryItem[],
     loadingStatus: RemoteDataStatus,
     errorMessage: TNullOrError
 }

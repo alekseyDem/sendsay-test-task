@@ -5,7 +5,7 @@ export const createReducer = <S, A>(initialState: S, request: TREQUEST_TYPE) => 
     return <S>(state = initialState, action: TAction<A>) => {
             switch (action.type) {
                 case request[REQUEST]:
-                    return {...state, ...action.payload, loadingStatus: RemoteDataStatus.LOADING};
+                    return {...state, loadingStatus: RemoteDataStatus.LOADING};
                 case request[FAILURE]:
                     return {...state, ...action.payload, loadingStatus: RemoteDataStatus.FAILURE};
                 case request[SUCCESS]:

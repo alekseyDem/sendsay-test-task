@@ -29,8 +29,7 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
 
     render() {
         const { sortField, dataUI, isSortOrderDesc} = this.state;
-        const { loadingStatus, errorMessage} = this.props;
-        console.warn('loadingStatus', loadingStatus)
+        const { loadingStatus, errorMessage, data} = this.props;
         return (
             <WithLoading error={errorMessage} status={loadingStatus}>
 

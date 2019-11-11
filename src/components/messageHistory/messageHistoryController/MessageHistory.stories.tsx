@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { MessageHistoryController } from './MessageHistory.controller';
 import { RemoteDataStatus } from '../../../RemoteData/RemoteData.component';
 
-export const MessageHistoryFixture = [
+export let MessageHistoryFixture = [
     {
         date: '01.01.05',
         theme: 'Тема письма, которая не поместится в эту строку, потому что там се и то',
