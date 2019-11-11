@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/alekseyDem/sendsay-test-task/static/css/main.e41c6afb.chunk.css",
+    "main.js": "/alekseyDem/sendsay-test-task/static/js/main.96f60f55.chunk.js",
+    "main.js.map": "/alekseyDem/sendsay-test-task/static/js/main.96f60f55.chunk.js.map",
+    "runtime-main.js": "/alekseyDem/sendsay-test-task/static/js/runtime-main.205e1c5d.js",
+    "runtime-main.js.map": "/alekseyDem/sendsay-test-task/static/js/runtime-main.205e1c5d.js.map",
+    "static/js/2.e7c19ceb.chunk.js": "/alekseyDem/sendsay-test-task/static/js/2.e7c19ceb.chunk.js",
+    "static/js/2.e7c19ceb.chunk.js.map": "/alekseyDem/sendsay-test-task/static/js/2.e7c19ceb.chunk.js.map",
+    "index.html": "/alekseyDem/sendsay-test-task/index.html",
+    "precache-manifest.d1a4989b3dfd628929ad25f53ad72ad5.js": "/alekseyDem/sendsay-test-task/precache-manifest.d1a4989b3dfd628929ad25f53ad72ad5.js",
+    "service-worker.js": "/alekseyDem/sendsay-test-task/service-worker.js",
+    "static/css/main.e41c6afb.chunk.css.map": "/alekseyDem/sendsay-test-task/static/css/main.e41c6afb.chunk.css.map",
+    "static/media/IconTrash.svg": "/alekseyDem/sendsay-test-task/static/media/IconTrash.ba899406.svg",
+    "static/media/clipper.svg": "/alekseyDem/sendsay-test-task/static/media/clipper.72d65e82.svg"
+  }
+}
