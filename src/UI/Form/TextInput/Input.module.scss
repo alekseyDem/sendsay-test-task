@@ -1,0 +1,65 @@
+.formWFieldWrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.label {
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 5px;
+	color: rgba(0, 0, 0, 0.6);
+	text-align: left;
+}
+.input {
+	width: 100%;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: #000000;
+	font-size: 18px;
+	line-height: 30px;
+	padding: 5px 10px;
+	outline: none;
+	&_left {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	&_right {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+	&:focus {
+		border-color: #45A5FF;
+	}
+}
+.formError {
+	font-size: 16px;
+	line-height: 25px;
+	display: flex;
+	align-items: center;
+	color: #FF6666;
+	padding: 0 10px;
+	position: absolute;
+	//top: 40px;
+}
+
+.inputAndErrorWrapper {
+	position: relative;
+}
+
+.textArea {
+	color: #000000;
+	font-size: 18px;
+	border: 1px solid #DDDDDD;
+	border-radius: 5px;
+	resize: none;
+	overflow: auto;
+	height: 140px;
+	width: 100%;
+	padding: 10px;
+	outline: none;
+	&:focus {
+		border-color: #45A5FF;
+	}
+}

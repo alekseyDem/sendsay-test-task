@@ -1,0 +1,30 @@
+.button {
+	border-radius: 5px;
+	color: #fff;
+	outline: none;
+	box-shadow: none;
+	border: none;
+	&__mSize {
+		padding: 5px 10px;
+		font-size: 18px;
+		line-height: 30px;
+		width: 140px;
+		box-shadow: 0 0 3px 0 #45A6FF;
+	}
+	&__submit {
+		background: linear-gradient(180deg, #45A6FF 0%, #0055FB 100%), #C4C4C4;
+		&:hover {
+			box-shadow: 0 0 0 0;
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(180deg, #45A6FF 0%, #0055FB 100%), #C4C4C4;
+		}
+		&:active {
+			box-shadow: 0 0 0 0;
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), linear-gradient(180deg, #45A6FF 0%, #0055FB 100%), #C4C4C4;
+		}
+		&:disabled {
+			box-shadow: 0 0 0 0;
+			background: linear-gradient(0deg, #C4C4C4, #C4C4C4), linear-gradient(180deg, #45A6FF 0%, #0055FB 100%);
+		}
+	}
+}
+

@@ -1,0 +1,43 @@
+.formField {
+	margin-top: 25px;
+	&__grouped {
+		align-items: flex-end;
+		display: flex;
+	}
+	&__single {
+		width: 100%;
+	}
+}
+
+.messageSender {
+	padding: 15px 15px 25px ;
+	background-color: #fff;
+	width: 780px;
+	border-radius: 4px;
+	box-shadow: 1px 1px 5px 0px;
+	h4 {
+		font-size: 22px;
+	}
+}
+
+.fileAttachedPreview {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.uploadFileBtnWrapper {
+}
+.sendBtnWrapper {
+	margin-top: 20px;
+}
+
+.fileError {
+	font-size: 14px;
+	margin: 2px 0;
+	flood-color: #FF6666;
+}
+
+.symbolsLeft {
+	font-size: 12px;
+}

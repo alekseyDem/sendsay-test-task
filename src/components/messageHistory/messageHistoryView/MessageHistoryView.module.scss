@@ -1,0 +1,69 @@
+.messageHistoryBlock {
+	margin-top: 20px;
+	padding: 0 15px;
+	position: relative;
+}
+.tableTitle {
+	font-size: 24px;
+	line-height: 30px;
+	color: #000000;
+	margin-bottom: 20px;
+}
+.tableHistory {
+	td, th {
+		padding: 5px 10px 5px 0;
+	}
+	td {
+		font-size: 16px;
+		line-height: 22px;
+	}
+	border-collapse: collapse;
+}
+.emptyHistory {
+	font-size: 16px;
+	line-height: 25px;
+	color: #000000;
+}
+
+.tableHead {
+	th {
+		color: #DDDDDD;
+		font-size: 16px;
+		line-height: 25px;
+		cursor: pointer;
+		&:hover{
+			.columnName {
+				color: #9c9c9c;
+			}
+		}
+	}
+	text-align: left;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.tdStatus {
+	text-align: right;
+	width: 100px;
+	&_error {
+		color: #FF6666;
+	}
+	&_success {
+		color: #03A100;
+	}
+	&_inprogress {
+		color: #DDDDDD;
+	}
+}
+.tdTheme {
+	text-overflow: ellipsis;
+	width: 490px;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+}
+.tdDate {
+	width: 100px;
+}
+.thStatus {
+	text-align: right;
+}

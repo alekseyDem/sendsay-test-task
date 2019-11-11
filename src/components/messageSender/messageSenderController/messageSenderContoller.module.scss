@@ -1,0 +1,21 @@
+ .loadingWrapper {
+     background-color: #fff;
+     width: 780px;
+     border-radius: 4px;
+     height: 525px;
+     box-shadow: 1px 1px 5px 0px;
+     position: relative;
+ }
+
+.successMessage {
+      h4 {
+           font-size: 26px;
+           margin-bottom: 20px;
+      }
+ position: absolute;
+ top: 50%;
+ text-align: center;
+ display: inline-block;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}

@@ -1,0 +1,32 @@
+.input {
+	position: fixed;
+	left: -1000%;
+}
+.label {
+	border: 2px solid transparent;
+	padding: 3px 3px 3px 0;
+	display: inline-flex;
+	align-items: center;
+	border-radius: 5px;
+	.clipperIcon {
+		margin-right: 5px;
+	}
+	.text {
+		font-size: 16px;
+		line-height: 20px;
+		color: #0055FB;
+	}
+	.clipperIcon {
+		path {
+			fill: #0055FB;
+		}
+	}
+	&:hover {
+		.text, .clipperIcon {
+			opacity: 0.9;
+		}
+	}
+	&:active {
+		border: 2px solid rgba(69, 165, 255, 0.5);
+	}
+}
