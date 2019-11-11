@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/github.com/sendsay-test-task/static/css/main.e41c6afb.chunk.css",
-    "main.js": "/github.com/sendsay-test-task/static/js/main.8d5c0c02.chunk.js",
-    "main.js.map": "/github.com/sendsay-test-task/static/js/main.8d5c0c02.chunk.js.map",
-    "runtime-main.js": "/github.com/sendsay-test-task/static/js/runtime-main.1f2f14bc.js",
-    "runtime-main.js.map": "/github.com/sendsay-test-task/static/js/runtime-main.1f2f14bc.js.map",
-    "static/js/2.0b0c8d62.chunk.js": "/github.com/sendsay-test-task/static/js/2.0b0c8d62.chunk.js",
-    "static/js/2.0b0c8d62.chunk.js.map": "/github.com/sendsay-test-task/static/js/2.0b0c8d62.chunk.js.map",
-    "index.html": "/github.com/sendsay-test-task/index.html",
-    "precache-manifest.be70ee025d1317f5cb4b143cb03622b5.js": "/github.com/sendsay-test-task/precache-manifest.be70ee025d1317f5cb4b143cb03622b5.js",
-    "service-worker.js": "/github.com/sendsay-test-task/service-worker.js",
-    "static/css/main.e41c6afb.chunk.css.map": "/github.com/sendsay-test-task/static/css/main.e41c6afb.chunk.css.map",
-    "static/media/IconTrash.svg": "/github.com/sendsay-test-task/static/media/IconTrash.ba899406.svg",
-    "static/media/clipper.svg": "/github.com/sendsay-test-task/static/media/clipper.72d65e82.svg"
+    "main.css": "/github.io/sendsay-test-task/static/css/main.e41c6afb.chunk.css",
+    "main.js": "/github.io/sendsay-test-task/static/js/main.6aee5d8d.chunk.js",
+    "main.js.map": "/github.io/sendsay-test-task/static/js/main.6aee5d8d.chunk.js.map",
+    "runtime-main.js": "/github.io/sendsay-test-task/static/js/runtime-main.7cec819b.js",
+    "runtime-main.js.map": "/github.io/sendsay-test-task/static/js/runtime-main.7cec819b.js.map",
+    "static/js/2.3a670e46.chunk.js": "/github.io/sendsay-test-task/static/js/2.3a670e46.chunk.js",
+    "static/js/2.3a670e46.chunk.js.map": "/github.io/sendsay-test-task/static/js/2.3a670e46.chunk.js.map",
+    "index.html": "/github.io/sendsay-test-task/index.html",
+    "precache-manifest.cee045ccbe3c6171b67a23d2255023a6.js": "/github.io/sendsay-test-task/precache-manifest.cee045ccbe3c6171b67a23d2255023a6.js",
+    "service-worker.js": "/github.io/sendsay-test-task/service-worker.js",
+    "static/css/main.e41c6afb.chunk.css.map": "/github.io/sendsay-test-task/static/css/main.e41c6afb.chunk.css.map",
+    "static/media/IconTrash.svg": "/github.io/sendsay-test-task/static/media/IconTrash.ba899406.svg",
+    "static/media/clipper.svg": "/github.io/sendsay-test-task/static/media/clipper.72d65e82.svg"
   }
 }
