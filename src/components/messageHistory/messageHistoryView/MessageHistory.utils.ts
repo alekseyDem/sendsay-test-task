@@ -8,7 +8,7 @@ export const getMessageClassName = (status: number): string => {
     } else {
         return statusClassNameError
     }
-}
+};
 
 export const getMessageStatus = (status: number): string => {
     if (status === -1) {
@@ -18,4 +18,4 @@ export const getMessageStatus = (status: number): string => {
     } else {
         return 'Ошибка'
     }
-}
+};

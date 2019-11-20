@@ -4,6 +4,7 @@ import css from './App.module.scss';
 
 import { MessageSenderContainer } from './containers/messageSender/MessageForm.container';
 import { MessageHistoryContainer } from './containers/messageHistory/MessageHistory.container';
+import { SelectedMessagesContainer } from './containers/selectedHistoryMessages/SelectedHistoryMessages.container';
 export class App extends Component {
   render () {
 
@@ -12,6 +13,7 @@ export class App extends Component {
             <div className={css.contentWrapper}>
                 <MessageSenderContainer />
                 <MessageHistoryContainer />
+                <SelectedMessagesContainer />
             </div>
         </div>
     );

@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
 import {
-    SORT_FIELD, TFIELD,
-    TMessageHistoryControllerState,
+    SORT_FIELD,
+    TFIELD,
+    TMessageHistoryControllerState, TMessageHistoryItem
 } from './MessageHistory.model';
 import { MessageHistoryView } from '../messageHistoryView/MessageHistory.view';
 import { changeSortOrder, sortByField, sortNumAndString, sortDate } from './MessageHistory.utils';
@@ -10,11 +11,11 @@ import { TMessageHistoryResponse } from '../../../actions/messageHistory.action'
 import { WithLoading } from '../../../RemoteData/RemoteData.component';
 
 
-const initialState = {
+const initialState: TMessageHistoryControllerState = {
     sortField: SORT_FIELD.date,
     isSortOrderDesc: false,
     dataUI: [],
-    data:[]
+    data:[],
 }
 type TMessageHistoryControllerProps = TMessageHistoryContainerProps & TMessageHistoryResponse;
 
@@ -29,14 +30,15 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
 
     render() {
         const { sortField, dataUI, isSortOrderDesc} = this.state;
-        const { loadingStatus, errorMessage, data} = this.props;
+        const { loadingStatus, errorMessage, selectedHistoryItems } = this.props;
         return (
             <WithLoading error={errorMessage} status={loadingStatus}>
-
                 <MessageHistoryView
                     data={dataUI}
+                    selectedHistoryItems={selectedHistoryItems}
                     sortByTheme={this.sortByTheme}
                     sortByDate={this.sortByDate}
+                    handleSelectItem={this.handleSelectItem}
                     sortField={sortField}
                     isSortOrderDesc={isSortOrderDesc}
                 />
@@ -54,6 +56,15 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
         }
         return null;
     }
+
+    handleSelectItem = (item: TMessageHistoryItem, isChecked: boolean) => {
+        const { setSelectedItem, deleteSelectedHistoryItem } = this.props;
+        if (isChecked) {
+            deleteSelectedHistoryItem(item.id)
+        } else  {
+            setSelectedItem(item)
+        }
+    };
 
     sortByTheme = () => {
         const {data} = this.props;

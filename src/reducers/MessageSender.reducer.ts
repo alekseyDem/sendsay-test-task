@@ -1,7 +1,7 @@
 import { RemoteDataStatus } from '../RemoteData/RemoteData.component';
 import { TNullOrError } from '../models/sharedModels';
 import { MESSAGE_FORM_TYPES, TMessageSenderRequest, TMessageSenderResponse } from '../actions/messageSender.action';
-import { createReducer } from './utils';
+import { createASyncReducer } from './utils';
 
 export type TMessageSenderState = {
     request?: TMessageSenderRequest,
@@ -15,4 +15,4 @@ const initialState: TMessageSenderState = {
     errorMessage: null
 };
 
-export const messageSenderReducer = createReducer(initialState, MESSAGE_FORM_TYPES);
+export const messageSenderReducer = createASyncReducer(initialState, MESSAGE_FORM_TYPES);

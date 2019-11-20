@@ -11,11 +11,11 @@ export const sortDate = (dateA: string, dateB: string, isSortOrderDesc: boolean)
     const dateAInMS = moment(dateA).unix();
     const dateBInMS = moment(dateB).unix();
     return sortNumAndString(dateAInMS, dateBInMS, isSortOrderDesc)
-}
+};
 
 export const changeSortOrder = (currentSortField: string, clickedSortField: TFIELD, isSortOrderDesc: boolean) => {
     return currentSortField === clickedSortField ? !isSortOrderDesc : !isSortOrderDesc;
-}
+};
 
 export const sortByField = (
     data: TMessageHistoryItem[],
@@ -25,4 +25,4 @@ export const sortByField = (
             return sortFunc(itemA[sortField], itemB[sortField], isSortOrderDesc)
         }
     )
-}
+};

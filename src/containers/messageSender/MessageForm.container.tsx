@@ -29,11 +29,6 @@ export const MessageSenderContainer = connect(
     mapDispatchToProps,
 )(MessageSenderController);
 
-//
-export type TMessageSenderContainerSuccessProps = {
-    reset: () => void;
-}
-
 
 const mapDispatchToPropsSuccessContainer = (dispatch: Dispatch<TActionEmpty>) => ({
     reset: () => dispatch(messageSenderAction.initial()),

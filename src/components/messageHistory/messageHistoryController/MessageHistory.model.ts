@@ -1,7 +1,8 @@
 export type TMessageHistoryItem = {
     date: string;
     theme: string;
-    status: number
+    status: number;
+    id: number
 }
 
 
@@ -17,5 +18,5 @@ export type TMessageHistoryControllerState = {
     sortField: TFIELD | string,
     isSortOrderDesc: boolean,
     dataUI: TMessageHistoryItem[],
-    data: TMessageHistoryItem[]
+    data: TMessageHistoryItem[],
 }

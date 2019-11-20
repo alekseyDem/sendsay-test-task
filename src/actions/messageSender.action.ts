@@ -1,6 +1,6 @@
 import {
     action,
-    createRequestTypes,
+    createAsyncRequestTypes,
     SUCCESS,
     FAILURE,
     REQUEST,
@@ -11,7 +11,7 @@ import {
 } from './actions.utils';
 import { TAttachedFile } from '../components/messageSender/messageSenderController/MessageSender.model';
 
-export const MESSAGE_FORM_TYPES = createRequestTypes('MESSAGE_FORM');
+export const MESSAGE_FORM_TYPES = createAsyncRequestTypes('MESSAGE_FORM');
 
 
 export type TMessageSenderRequest = {

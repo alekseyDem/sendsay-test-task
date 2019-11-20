@@ -3,6 +3,7 @@ import css from './MessageHistoryView.module.scss';
 import { SORT_FIELD, TMessageHistoryItem } from '../messageHistoryController/MessageHistory.model';
 import { getMessageClassName, getMessageStatus } from './MessageHistory.utils';
 import { TMessageHistoryResponse } from '../../../actions/messageHistory.action';
+import { MDASH } from '../../../utils/utils';
 
 
 const arrowUp = <span style={{color: '#13e613', fontSize: '18px'}}>&#x2191;</span>;
@@ -11,8 +12,14 @@ const arrowDown = <span style={{color: '#e6714e', fontSize: '18px'}}>&#x2193;</s
 type TMessageHistoryViewProps = TMessageHistoryResponse & {
     sortByTheme: () => void,
     sortByDate: () => void,
+    handleSelectItem: (item: TMessageHistoryItem, isChecked: boolean) => void,
+    selectedHistoryItems: TMessageHistoryItem[],
     sortField: string,
     isSortOrderDesc: boolean
+}
+
+const isHistoryItemSelected = (selectedHistoryItems: TMessageHistoryItem[], historyItemId: number): boolean => {
+    return selectedHistoryItems.some(historyItem => historyItem.id === historyItemId)
 }
 
 export class MessageHistoryView extends PureComponent<TMessageHistoryViewProps> {
@@ -21,25 +28,37 @@ export class MessageHistoryView extends PureComponent<TMessageHistoryViewProps> 
             data,
             sortByTheme,
             sortByDate,
+            handleSelectItem,
             sortField,
-            isSortOrderDesc
+            isSortOrderDesc,
+            selectedHistoryItems
         } = this.props;
+        const isSortedByDate = sortField === SORT_FIELD.date &&  isSortOrderDesc ? arrowDown : arrowUp;
+        const isSortedByTheme = sortField === SORT_FIELD.theme &&  isSortOrderDesc ? arrowDown : arrowUp;
         return (
             <div className={css.messageHistoryBlock}>
                 <div className={css.tableTitle}>Отправленные сообщения</div>
                 {!!data.length && <table className={css.tableHistory}>
 							    <thead className={css.tableHead}>
 							    <tr>
-								    <th onClick={sortByDate}><span className={css.columnName}>Дата</span> {sortField === SORT_FIELD.date &&  isSortOrderDesc ? arrowDown : arrowUp}</th>
-                                  <th onClick={sortByTheme}><span className={css.columnName}>Тема</span> {sortField === SORT_FIELD.theme &&  isSortOrderDesc ? arrowDown : arrowUp} </th>
-								    <th className={css.thStatus}>Статуc</th>
+                                    <th>/</th>
+                                    <th onClick={sortByDate}><span className={css.columnName}>Дата</span> {isSortedByDate}</th>
+                                    <th onClick={sortByTheme}><span className={css.columnName}>Тема</span> {isSortedByTheme} </th>
+                                    <th className={css.thStatus}>Статуc</th>
 							    </tr>
 							    </thead>
 							    <tbody>
                   {data.map((item: TMessageHistoryItem, index: number) => {
+                      const isChecked = isHistoryItemSelected(selectedHistoryItems, item.id);
                       return <tr key={index}>
+                          <td>
+                              <input
+                                  onChange={() => handleSelectItem(item, isChecked)}
+                                  checked={isChecked}
+                                  type="checkbox"/>
+                          </td>
                           <td className={css.tdDate}>{item.date}</td>
-                          <td className={css.tdTheme} title={item.theme}>{item.theme || '—'}</td>
+                          <td className={css.tdTheme} title={item.theme}>{item.theme || MDASH}</td>
                           <td className={getMessageClassName(item.status)}>{getMessageStatus(item.status)}</td>
                       </tr>
                   })}

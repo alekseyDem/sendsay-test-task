@@ -1,6 +1,6 @@
 import {
     action, actionWithoutPayload,
-    createRequestTypes,
+    createAsyncRequestTypes,
     FAILURE,
     INITIAL,
     REQUEST,
@@ -10,7 +10,7 @@ import {
     TPayload
 } from './actions.utils';
 import { TMessageHistoryItem } from '../components/messageHistory/messageHistoryController/MessageHistory.model';
-export const MESSAGE_HISTORY_TYPES = createRequestTypes('MESSAGE_HISTORY');
+export const MESSAGE_HISTORY_TYPES = createAsyncRequestTypes('MESSAGE_HISTORY');
 
 export type TMessageHistoryError = {errorMessage: Error}
 export type TMessageHistoryResponse = {

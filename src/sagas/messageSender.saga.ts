@@ -17,7 +17,7 @@ export function* postMessage (params: TAction<TMessageSenderRequest>) {
         yield put(messageSenderAction.success({'track.id': 1}))
 
         // Simulate request for retrieving updated data
-        MessageHistoryFixture.push({theme: request.letter.subject, status: 0, date: '11.10.19'});
+        MessageHistoryFixture.push({theme: request.letter.subject, status: 0, date: '11.10.19', id: Math.floor(Math.random() * 10)});
         yield put(messageHistoryAction.request())
     } catch (e) {
         yield put(messageSenderAction.failure(e))

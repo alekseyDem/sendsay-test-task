@@ -2,20 +2,34 @@ export const REQUEST = 'REQUEST';
 export const SUCCESS = 'SUCCESS';
 export const FAILURE = 'FAILURE';
 export const INITIAL = 'INITIAL';
+export const SET = 'SET';
+export const DELETE = 'DELETE';
 
-export type TREQUEST_TYPE = {
+export type TAsync_REQUEST_TYPE = {
     REQUEST: string,
     SUCCESS: string,
     FAILURE: string,
     INITIAL: string
 }
 
-export function createRequestTypes(base: string): TREQUEST_TYPE {
+export type TSync_REQUEST_TYPE = {
+    SET: string,
+    DELETE: string
+}
+
+export function createAsyncRequestTypes(base: string): TAsync_REQUEST_TYPE {
     return {
         REQUEST: `${base}_${REQUEST}`,
         SUCCESS: `${base}_${SUCCESS}`,
         FAILURE: `${base}_${FAILURE}`,
         INITIAL: `${base}_${INITIAL}`,
+    }
+}
+
+export function createSyncRequestTypes(base: string): TSync_REQUEST_TYPE {
+    return {
+        SET: `${base}_${SET}`,
+        DELETE: `${base}_${DELETE}`
     }
 }
 
