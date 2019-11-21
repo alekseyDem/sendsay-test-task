@@ -1,11 +1,10 @@
 import {
     ACCEPTED_FILE_FORMATS,
     MAX_FILE_SIZE_IN_B,
-    MAX_FILE_SIZE_IN_MB,
+    MAX_FILE_SIZE_IN_MB, MAX_TOTAL_FILES_SIZE_IN_B,
     MAX_TOTAL_FILES_SIZE_IN_MB
 } from '../../../config/filesUpload.config';
 import { isFieldEmpty, isValidEmail } from '../../../UI/Form/TextInput/TextInput.utils';
-import { MAX_TOTAL_FILES_SIZE } from '../../../config/config';
 
 export const FIELDS_ERRORS = {
     EMPTY_FIELD: 'Поле не может быть пустым',
@@ -45,7 +44,7 @@ export const attachedFilesValidationRules = {
     checkTotalFilesSize: {
         validator: (fileSizesPerFile: number[]) => {
             const attachedFilesSizeTotal = fileSizesPerFile.reduce((prev: number, current: number) => prev + current, 0);
-            return fileSizesPerFile.length > 1 && attachedFilesSizeTotal > MAX_TOTAL_FILES_SIZE
+            return fileSizesPerFile.length > 1 && attachedFilesSizeTotal > MAX_TOTAL_FILES_SIZE_IN_B
         },
         errorMessage: FIELDS_ERRORS.INVALID_TOTAL_FILE_SIZE
     },

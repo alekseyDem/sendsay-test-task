@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import css from './UploadFile.module.scss';
 import clipper from './clipper.svg';
-import { FILE_ATTACH_CONFIG } from '../../config/config';
+import { FILE_ATTACH_CONFIG } from '../../config/filesUpload.config';
 
 type TUI_UploadFileProps = {
     onChange: (event: ChangeEvent<HTMLInputElement>) => void;
