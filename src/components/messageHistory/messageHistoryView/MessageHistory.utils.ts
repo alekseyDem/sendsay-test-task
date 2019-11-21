@@ -1,4 +1,5 @@
 import { statusClassNameError, statusClassNameInProgress, statusClassNameSuccess } from './MessageHistory.config';
+import { TMessageHistoryItem } from '../messageHistoryController/MessageHistory.model';
 
 export const getMessageClassName = (status: number): string => {
     if (status === -1) {
@@ -18,4 +19,13 @@ export const getMessageStatus = (status: number): string => {
     } else {
         return 'Ошибка'
     }
+};
+
+
+export const isHistoryItemSelected = (selectedHistoryItems: TMessageHistoryItem[], historyItemId: number): boolean => {
+    return selectedHistoryItems.some(historyItem => historyItem.id === historyItemId)
+};
+
+export const isAllHistoryItemsSelected = (selectedHistoryItems: TMessageHistoryItem[], historyItems: TMessageHistoryItem[]): boolean => {
+    return selectedHistoryItems.length === historyItems.length
 };

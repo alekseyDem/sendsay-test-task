@@ -3,7 +3,9 @@ export const SUCCESS = 'SUCCESS';
 export const FAILURE = 'FAILURE';
 export const INITIAL = 'INITIAL';
 export const SET = 'SET';
+export const SET_BULK = 'SET_BULK';
 export const DELETE = 'DELETE';
+export const DELETE_BULK = 'DELETE_BULK';
 
 export type TAsync_REQUEST_TYPE = {
     REQUEST: string,
@@ -14,7 +16,9 @@ export type TAsync_REQUEST_TYPE = {
 
 export type TSync_REQUEST_TYPE = {
     SET: string,
-    DELETE: string
+    DELETE: string,
+    DELETE_BULK: string,
+    SET_BULK: string
 }
 
 export function createAsyncRequestTypes(base: string): TAsync_REQUEST_TYPE {
@@ -29,7 +33,9 @@ export function createAsyncRequestTypes(base: string): TAsync_REQUEST_TYPE {
 export function createSyncRequestTypes(base: string): TSync_REQUEST_TYPE {
     return {
         SET: `${base}_${SET}`,
-        DELETE: `${base}_${DELETE}`
+        DELETE: `${base}_${DELETE}`,
+        SET_BULK: `${base}_${SET_BULK}`,
+        DELETE_BULK: `${base}_${DELETE_BULK}`,
     }
 }
 

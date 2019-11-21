@@ -39,6 +39,7 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
                     sortByTheme={this.sortByTheme}
                     sortByDate={this.sortByDate}
                     handleSelectItem={this.handleSelectItem}
+                    handleBulkUpdate={this.handleBulkUpdate}
                     sortField={sortField}
                     isSortOrderDesc={isSortOrderDesc}
                 />
@@ -55,6 +56,15 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
             };
         }
         return null;
+    }
+
+    handleBulkUpdate = (isChecked: boolean) => {
+        const { setBulk, deleteBulk, data } = this.props;
+        if (isChecked) {
+            deleteBulk()
+        } else {
+            setBulk(data)
+        }
     }
 
     handleSelectItem = (item: TMessageHistoryItem, isChecked: boolean) => {
