@@ -1,7 +1,7 @@
 import React, { ChangeEvent, PureComponent } from 'react';
 import css from './MessageSender.module.scss'
 import { UIInputField } from '../../../UI/Form/TextInput/Input';
-import { UI_AttachedFileView } from '../../../UI/AttachedFileView/AttachedFileView';
+import { UIAttachedFileView } from '../../../UI/AttachedFileView/AttachedFileView';
 import { UIInputFile } from '../../../UI/Form/FileInput/InputFile';
 import { formFieldGrouped, formFieldSingle } from './MessageSender.config';
 import { UIButton } from '../../../UI/Button/Button';
@@ -122,7 +122,7 @@ export class MessageSenderView extends PureComponent<TMessageSenderViewProps> {
                     </DropZone>
                     {attachedFiles.length > 0 && <div className={css.fileAttachedPreview}>
                         {attachedFiles.map((file: TAttachedFile, i: number) => {
-                            return <UI_AttachedFileView
+                            return <UIAttachedFileView
                                 key={i}
                                 fileName={file.name}
                                 onDelete={onDeleteFile}

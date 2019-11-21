@@ -9,7 +9,7 @@ type TUI_UploadFileProps = {
     fileName: string,
 }
 
-export class UI_AttachedFileView extends PureComponent<TUI_UploadFileProps> {
+export class UIAttachedFileView extends PureComponent<TUI_UploadFileProps> {
 
     handleDeleteFile = () => {
         const {onDelete, fileName} = this.props;

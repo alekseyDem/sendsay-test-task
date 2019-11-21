@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { MessageHistoryController } from './MessageHistory.controller';
-import { RemoteDataStatus } from '../../../RemoteData/RemoteData.component';
 import { TMessageHistoryItem } from './MessageHistory.model';
 
 export let MessageHistoryFixture: TMessageHistoryItem[] = [

@@ -8,6 +8,7 @@ import { MessageHistoryFixture } from '../components/messageHistory/messageHisto
 const getData = () => api.get(`/posts`);
 export function* getHistory () {
     try {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const response = yield call(getData)
         // simulate success http-response
         yield put(messageHistoryAction.success({data: MessageHistoryFixture}))
@@ -17,6 +18,5 @@ export function* getHistory () {
     }
 }
 export function* actionWatcherMessageHistory() {
-    // @ts-ignore
     yield takeLatest(MESSAGE_HISTORY_TYPES[REQUEST], getHistory)
 }

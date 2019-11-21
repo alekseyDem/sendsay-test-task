@@ -1,8 +1,8 @@
 import { Dispatch } from 'react'
 import { ApplicationState } from '../../reducers';
-import { TAction, TActionEmpty, TPayload } from '../../actions/actions.utils';
+import { TAction } from '../../actions/actions.utils';
 import { connect } from 'react-redux';
-import { SelectedHistoryView } from '../../components/messageHistory/selectedMessages/SelectedHistory.view';
+import { SelectedHistoryView } from '../../components/selectedMessages/SelectedHistory.view';
 import { selectedMessagesAction } from '../../actions/selectedHistoryItem.action';
 import { Tid } from '../../reducers/SelectedHistoryMessage.reducer';
 

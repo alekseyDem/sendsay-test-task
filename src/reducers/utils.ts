@@ -4,8 +4,7 @@ import {
     REQUEST,
     SUCCESS,
     TAction,
-    TAsync_REQUEST_TYPE,
-    TSync_REQUEST_TYPE
+    TAsync_REQUEST_TYPE
 } from '../actions/actions.utils';
 import { RemoteDataStatus } from '../RemoteData/RemoteData.component';
 

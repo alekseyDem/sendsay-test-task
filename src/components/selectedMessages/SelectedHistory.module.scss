@@ -1,0 +1,10 @@
+.selectedItemWrapper {
+	height: 50px;
+}
+
+.deleteIcon {
+	margin-left: 10px;
+	&:hover {
+		opacity: 0.7;
+	}
+}
