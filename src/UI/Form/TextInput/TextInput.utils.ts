@@ -1,6 +1,6 @@
-import css from './Input.module.scss';
-import { formLeftClassname, formRightClassname } from './Input.config';
-import { INPUT_POSITION } from './Input.model';
+import css from './TextInput.module.scss';
+import { INPUT_POSITION } from './TextInput.model';
+import { formLeftClassname, formRightClassname } from './Input/Input.config';
 
 export const detectInputPosition = (formPosition?: INPUT_POSITION) => {
     switch (formPosition) {

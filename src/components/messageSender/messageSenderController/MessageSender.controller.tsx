@@ -84,13 +84,13 @@ export class MessageSenderController extends PureComponent<TMessageSenderControl
                         recipientEmail
                     ]
                 }
-            }
-            sendMessage(requestObject)
+            };
+            sendMessage(requestObject);
             this.setState({
                 ...INITIAL_STATE
             })
         }
-    }
+    };
 
     //#endregion
 
@@ -150,7 +150,7 @@ export class MessageSenderController extends PureComponent<TMessageSenderControl
         this.handleFieldChange('emailTitle', e.target.value)
     };
 
-    onLetterContentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    onLetterContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         const symbolsInCurrentMessage = MAX_SYMBOLS_FOR_MESSAGE - e.target.value.length;
         if (symbolsInCurrentMessage >= 0) {
             this.setState({

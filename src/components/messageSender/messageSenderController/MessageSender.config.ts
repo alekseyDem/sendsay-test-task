@@ -4,7 +4,7 @@ import {
     MAX_FILE_SIZE_IN_MB,
     MAX_TOTAL_FILES_SIZE_IN_MB
 } from '../../../config/filesUpload.config';
-import { isFieldEmpty, isValidEmail } from '../../../UI/Form/TextInput/Input.utils';
+import { isFieldEmpty, isValidEmail } from '../../../UI/Form/TextInput/TextInput.utils';
 import { MAX_TOTAL_FILES_SIZE } from '../../../config/config';
 
 export const FIELDS_ERRORS = {

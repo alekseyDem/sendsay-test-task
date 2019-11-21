@@ -12,27 +12,29 @@ const initialState: TSelectedHistoryItemsState = {
 
 export type Tid = {id: number}
 
-export const selectedHistoryItemsReducer = (state = initialState, action: TAction<TMessageHistoryItem | Tid | TMessageHistoryItem[]>) => {
+export const selectedHistoryItemsReducer = (
+    state = initialState, action: TAction<TMessageHistoryItem | Tid | TMessageHistoryItem[]>
+):TSelectedHistoryItemsState  => {
     switch (action.type) {
         case SELECTED_MESSAGES_TYPES[SET]:
-            return   {
-            selectedHistoryItems: [...state.selectedHistoryItems, action.payload]
-        }   ;
+            return {
+                selectedHistoryItems: [...state.selectedHistoryItems, action.payload as TMessageHistoryItem]
+            };
         case SELECTED_MESSAGES_TYPES[DELETE]:
+            const itemIdToDelete = action.payload as Tid;
             return  {
-                //@ts-ignore
-                selectedHistoryItems: state.selectedHistoryItems.filter(element => element.id !== action.payload.id)
+                selectedHistoryItems: state.selectedHistoryItems.filter(element => element.id !== itemIdToDelete.id)
             };
         case SELECTED_MESSAGES_TYPES[DELETE_BULK]:
             return  {
                 selectedHistoryItems: []
             };
         case SELECTED_MESSAGES_TYPES[SET_BULK]:
+            const bulkItems = action.payload as TMessageHistoryItem[];
             return  {
-                //@ts-ignore
-                selectedHistoryItems: action.payload.slice()
+                selectedHistoryItems: bulkItems.slice()
             };
         default:
             return state;
     }
-}
+};

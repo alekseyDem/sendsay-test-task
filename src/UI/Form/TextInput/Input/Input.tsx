@@ -1,10 +1,11 @@
 import React from 'react';
-import css from './Input.module.scss';
-import { isDefined } from '../../../utils/utils';
-import { detectInputPosition } from './Input.utils';
-import { TUI_InputProps } from './Input.model';
+import css from './../TextInput.module.scss';
 
-export const UIInputField = (props: TUI_InputProps) => {
+import { TUITextInputProps } from '../TextInput.model';
+import { isDefined } from '../../../../utils/utils';
+import { detectInputPosition } from '../TextInput.utils';
+
+export const UIInputField = (props: TUITextInputProps<HTMLInputElement>) => {
     const {
         placeholder,
         errorMessage,
@@ -26,7 +27,6 @@ export const UIInputField = (props: TUI_InputProps) => {
                        placeholder={placeholder}
                        className={inputClassName}
                 />
-                {/*<textarea className={css.textArea}></textarea>*/}
                 {errorMessage && <div className={css.formError}>{errorMessage}</div>}
             </div>
         </div>

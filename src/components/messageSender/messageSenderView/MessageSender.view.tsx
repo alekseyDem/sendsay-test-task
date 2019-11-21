@@ -1,13 +1,14 @@
 import React, { ChangeEvent, PureComponent } from 'react';
 import css from './MessageSender.module.scss'
-import { UIInputField } from '../../../UI/Form/TextInput/Input';
 import { UIAttachedFileView } from '../../../UI/AttachedFileView/AttachedFileView';
 import { UIInputFile } from '../../../UI/Form/FileInput/InputFile';
 import { formFieldGrouped, formFieldSingle } from './MessageSender.config';
 import { UIButton } from '../../../UI/Button/Button';
-import { INPUT_POSITION } from '../../../UI/Form/TextInput/Input.model';
+import { INPUT_POSITION } from '../../../UI/Form/TextInput/TextInput.model';
 import { DropZone } from '../../../UI/Form/DropZone/DropZone';
 import { TAttachedFile, TMessageSenderControllerState } from '../messageSenderController/MessageSender.model';
+import { UIInputField } from '../../../UI/Form/TextInput/Input/Input';
+import { UITextArea } from '../../../UI/Form/TextInput/TextArea/TextArea';
 
 
 type TMessageSenderViewProps = {
@@ -21,7 +22,7 @@ type TMessageSenderViewProps = {
     onRecipientNameChange: (event: ChangeEvent<HTMLInputElement>) => void,
     onRecipientEmailChange: (event: ChangeEvent<HTMLInputElement>) => void,
     onEmailTitleChange: (event: ChangeEvent<HTMLInputElement>) => void,
-    onLetterContentChange: (event: ChangeEvent<HTMLInputElement>) => void
+    onLetterContentChange: (event: ChangeEvent<HTMLTextAreaElement>) => void
 }
 
 export class MessageSenderView extends PureComponent<TMessageSenderViewProps> {
@@ -110,7 +111,7 @@ export class MessageSenderView extends PureComponent<TMessageSenderViewProps> {
                             />
                         </div>
                         <div className={formFieldSingle}>
-                            <UIInputField
+                            <UITextArea
                                 value={content}
                                 onChange={onLetterContentChange}
                                 fieldName={'content'}

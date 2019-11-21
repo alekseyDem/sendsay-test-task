@@ -16,5 +16,4 @@ export const fileListToAttachedFileAsync = async (files: File[]) => {
         encoding : "base64"
     }));
     return normalizedFiles
-
 };

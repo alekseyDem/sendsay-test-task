@@ -1,7 +1,7 @@
 import React from 'react';
 
-export type TUI_InputProps = {
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+export type TUITextInputProps<T> = {
+    onChange: (e: React.ChangeEvent<T>) => void;
     placeholder: string;
     errorMessage?: string;
     labelText?: string;

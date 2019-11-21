@@ -16,7 +16,8 @@ const initialState: TMessageHistoryControllerState = {
     isSortOrderDesc: false,
     dataUI: [],
     data:[],
-}
+};
+
 type TMessageHistoryControllerProps = TMessageHistoryContainerProps & TMessageHistoryResponse;
 
 export class MessageHistoryController extends PureComponent<TMessageHistoryControllerProps, TMessageHistoryControllerState> {
@@ -65,7 +66,7 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
         } else {
             setBulk(data)
         }
-    }
+    };
 
     handleSelectItem = (item: TMessageHistoryItem, isChecked: boolean) => {
         const { setSelectedItem, deleteSelectedHistoryItem } = this.props;
@@ -81,7 +82,7 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
         const {sortField, isSortOrderDesc} = this.state;
         // TODO rewrite fields
         const FIELD_THEME = SORT_FIELD.theme as TFIELD;
-        const isSortOrderDescModified = changeSortOrder(sortField, FIELD_THEME, isSortOrderDesc)
+        const isSortOrderDescModified = changeSortOrder(sortField, FIELD_THEME, isSortOrderDesc);
 
         const sortedData = sortByField(data, FIELD_THEME, isSortOrderDescModified, sortNumAndString);
         this.setState({
@@ -89,12 +90,12 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
             isSortOrderDesc: !isSortOrderDesc,
             sortField: FIELD_THEME
         })
-    }
+    };
 
     sortByDate = () => {
         const {data} = this.props;
         const {isSortOrderDesc} = this.state;
-        // TODO rewrite fields
+        // TODO rewrite fields and remove ts-ignore
         const FIELD_DATE = SORT_FIELD.date as TFIELD;
         // @ts-ignore
         const sortedData = sortByField(data, FIELD_DATE, isSortOrderDesc, sortDate);
@@ -106,4 +107,4 @@ export class MessageHistoryController extends PureComponent<TMessageHistoryContr
     };
 
 
-};
+}
