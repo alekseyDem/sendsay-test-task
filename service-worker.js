@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/github.io/sendsay-test-task/precache-manifest.cee045ccbe3c6171b67a23d2255023a6.js"
+  "/github.io/sendsay-test-task/precache-manifest.4436a32c0aa484b10d42e78b5ce50dda.js"
 );
 
 self.addEventListener('message', (event) => {

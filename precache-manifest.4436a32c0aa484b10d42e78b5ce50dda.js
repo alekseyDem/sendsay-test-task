@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8447173a6bed107836294a54d97146dc",
+    "revision": "abb635927efa32362097ab3d6e0ecd1d",
     "url": "/github.io/sendsay-test-task/index.html"
   },
   {
-    "revision": "c0dd3efde084c27f603e",
-    "url": "/github.io/sendsay-test-task/static/css/main.e41c6afb.chunk.css"
+    "revision": "f5814e3b6e0d57326df4",
+    "url": "/github.io/sendsay-test-task/static/css/main.f35baf1d.chunk.css"
   },
   {
-    "revision": "f24e2919d8f7e9dc9332",
-    "url": "/github.io/sendsay-test-task/static/js/2.3a670e46.chunk.js"
+    "revision": "aa1bb517e3573f6bcd21",
+    "url": "/github.io/sendsay-test-task/static/js/2.5f20765d.chunk.js"
   },
   {
-    "revision": "c0dd3efde084c27f603e",
-    "url": "/github.io/sendsay-test-task/static/js/main.6aee5d8d.chunk.js"
+    "revision": "f5814e3b6e0d57326df4",
+    "url": "/github.io/sendsay-test-task/static/js/main.845419d8.chunk.js"
   },
   {
     "revision": "37aa53335b6138d7217d",
